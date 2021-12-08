@@ -1,0 +1,29 @@
+.layui-footer {
+    text-align: center;
+    font-size: 12px;
+}
+
+.iconfont {
+    margin-right: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.layui-body {
+    overflow: hidden;
+}
+
+a {
+    transition: none !important;
+}
+
+#welcome-span {
+    position: relative;
+    top: 5px;
+    left: 6px;
+    font-size: 14px;
+    color: #fff;
+}
