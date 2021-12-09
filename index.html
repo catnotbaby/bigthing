@@ -20,7 +20,7 @@
             <!-- 头部区域（可配合layui 已有的水平导航） -->
 
             <ul class="layui-nav layui-layout-right">
-                <span id="welcome-span">欢迎,***</span>
+                <span id="welcome-span"></span>
                 <li class="layui-nav-item layui-hide layui-show-md-inline-block">
 
                     <a href="javascript:;">
@@ -32,9 +32,9 @@
                         <dd><a href="">重置密码</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
+                <li id="close_btn" class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
                     <a href="javascript:;">
-                        <span class="iconfont icon-tuichu"></span>退出
+                        <span class="iconfont icon-tuichu "></span>退出
                     </a>
 
                 </li>
@@ -84,6 +84,8 @@
 
     <script src="./assets/lib/jquery.js"></script>
     <script src="./assets/lib/layui/layui.all.js"></script>
+    <script src="./assets/js/Api_option.js"></script>
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>

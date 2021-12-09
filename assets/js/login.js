@@ -46,19 +46,20 @@ $(function() {
 
     //登录提交事件
     $("#form_reg").submit(function(e) {
-        e.preventDefault;
+        e.preventDefault();
         //发起ajax请求
         $.ajax({
             url: '/api/login',
             method: 'post',
             //快速获取表单数据，适应多条信息
             data: $(this).serialize(),
+
             success: function(res) {
                 if (res.status !== 0) {
                     return layer.msg("登录失败，请重试！")
                 }
                 layer.msg("登录成功");
-                localStorage.setItem("token", res.token)
+                localStorage.setItem("token", res.token);
                 location.href = '/index.html';
             }
         })
