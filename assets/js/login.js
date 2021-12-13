@@ -56,7 +56,7 @@ $(function() {
 
             success: function(res) {
                 if (res.status !== 0) {
-                    return layer.msg("登录失败，请重试！")
+                    return layer.msg(res.message)
                 }
                 layer.msg("登录成功");
                 localStorage.setItem("token", res.token);

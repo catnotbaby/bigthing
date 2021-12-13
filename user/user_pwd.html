@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户信息</title>
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../assets/css/user/user_info.css">
+</head>
+
+<body>
+    <!-- 卡片面板 -->
+    <div class="layui-card">
+        <div class="layui-card-header">重置密码</div>
+        <div class="layui-card-body">
+            <!-- 表单 -->
+            <form class="layui-form">
+                <!-- <input type="hidden" name="id"> -->
+                <div class="layui-form-item">
+                    <label class="layui-form-label">旧密码：</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="oldPwd" required lay-verify="required|pwd" autocomplete="off" placeholder="请输入旧密码" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">新密码：</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="newPwd" required lay-verify="required|pwd" placeholder="请输入新密码" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">确认密码：</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="repassword" required lay-verify="required|pwd|repwd" placeholder="请再次输入新密码" autocomplete="off" class="layui-input" id="nickname">
+                    </div>
+                </div>
+                <div class="layui-input-block">
+                    <button class="layui-btn layui-btn-normal" lay-submit>提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary" id="btn_reset">重置</button>
+                </div>
+            </form>
+            <!-- 表单 -->
+        </div>
+    </div>
+    <!-- 卡片面板 -->
+
+
+
+
+    <script src="../assets/lib/jquery.js"></script>
+    <script src="../assets/lib/layui/layui.all.js"></script>
+    <script src="../assets/js/Api_option.js"></script>
+    <script src="../assets/js/user/user_pwd.js"></script>
+</body>
+
+</html>

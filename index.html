@@ -27,9 +27,9 @@
                         <img src="/assets/images/sample.jpg" class="layui-nav-img"> 个人中心
                     </a>
                     <dl class="layui-nav-child">
-                        <dd><a href="">基本资料</a></dd>
+                        <dd><a href="/user/user_info.html" target="fd">基本资料</a></dd>
                         <dd><a href="">更换头像</a></dd>
-                        <dd><a href="">重置密码</a></dd>
+                        <dd><a href="/user/user_pwd.html">重置密码</a></dd>
                     </dl>
                 </li>
                 <li id="close_btn" class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
@@ -61,9 +61,9 @@
                     <li class="layui-nav-item">
                         <a href="javascript:;"><span class="iconfont icon-user"></span>个人中心</a>
                         <dl class="layui-nav-child">
-                            <dd><a href="javascript:;">基本资料</a></dd>
-                            <dd><a href="javascript:;">更换头像</a></dd>
-                            <dd><a href="javascript:;">重置密码</a></dd>
+                            <dd><a href="/user/user_info.html" target="fd">基本资料</a></dd>
+                            <dd><a href="" target="fd">更换头像</a></dd>
+                            <dd><a href="/user/user_pwd.html" target="fd">重置密码</a></dd>
                         </dl>
                     </li>
 
@@ -73,7 +73,7 @@
 
         <div class="layui-body">
             <!-- 内容主体区域 -->
-            <iframe name="fd" src="/home/dashboard.html" frameborder="0"></iframe>
+            <iframe name="fd" src="/home/dashboard.html" frameborder="0" id="iframeIds"></iframe>
         </div>
 
         <div class="layui-footer">

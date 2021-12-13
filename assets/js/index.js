@@ -45,7 +45,7 @@ $(function() {
     }
     //渲染用户名和图片
     function render_user(user) {
-        var userinfo_name = user.username || user.nickname;
+        var userinfo_name = user.nickname || user.username;
         var userinfo_pic = user.user_pic;
         $("#welcome-span").html('欢迎,' + userinfo_name);
         if (userinfo_pic !== null) {
