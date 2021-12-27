@@ -33,10 +33,8 @@ $(function() {
             init_user_info();
         })
         //提交表单
-    $(".layui-form").on('submit', function(e) {
+    $(".user_info").on('submit', function(e) {
         e.preventDefault();
-
-
         $.ajax({
             url: '/my/userinfo',
             method: 'post',

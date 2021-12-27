@@ -1,0 +1,41 @@
+ .futext {
+     width: 600px;
+ }
+ 
+ .layui-card-body {
+     /* width: 600px; */
+ }
+ /* 封面容器的样式 */
+ 
+ .cover-box {
+     display: flex;
+     width: 600px;
+ }
+ /* 左侧裁剪区域的样式 */
+ 
+ .cover-left {
+     width: 580px;
+     height: 260px;
+     overflow: hidden;
+     margin-right: 20px;
+ }
+ /* 右侧盒子的样式 */
+ 
+ .cover-right {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+ /* 预览区域的样式 */
+ 
+ .img-preview {
+     width: 200px;
+     height: 140px;
+     background-color: #ccc;
+     margin-bottom: 20px;
+     overflow: hidden;
+ }
+ 
+ input[type=file] {
+     display: none
+ }

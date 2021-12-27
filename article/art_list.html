@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文章列表</title>
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/assets/css/user/user_info.css">
+    <link rel="stylesheet" href="/assets/lib/cropper/cropper.css" />
+    <link rel="stylesheet" href="/assets/css/article/art_create.css" />
+
+    <link rel="stylesheet" href="/assets/css/article/art_list.css">
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">文章列表</div>
+        <div class="layui-card-body">
+            <!-- 筛选 -->
+            <form class="layui-form layui-inline select-table">
+                <div class="layui-form-item layui-input-inline">
+                    <select name="cate_id" id="select_init">
+
+ </select>
+                </div>
+                <div class="layui-input-inline layui-form-item">
+                    <select name="state" id="state">
+  <option value="">请选择状态</option>
+  <option value="已发布">已发布</option>
+  <option value="草稿">草稿</option>
+ 
+</select>
+                </div>
+                <div class=" layui-input-inline  layui-form-item ">
+                    <button class="layui-btn" lay-submit>筛选</button>
+                </div>
+
+            </form>
+            <!-- list -->
+            <table class="layui-table">
+                <colgroup>
+                    <col>
+                    <col width="150">
+                    <col width="180">
+                    <col width="150">
+                    <col width="150">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>标题</th>
+                        <th>发表时间</th>
+                        <th>状态</th>
+                        <th>所属分类名称</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+                </tbody>
+            </table>
+            <!-- 下拉框的模板数据 -->
+            <script type="text/html" id="select_table">
+
+                <option value="">请选择类别</option>
+                {{each data}}
+                <option value="{{$value.Id}}">{{$value.name}}</option>
+
+                {{/each}}
+            </script>
+            <!-- list的模板数据 -->
+            <script type="text/html" id="list_table">
+                {{each data}}
+                <tr>
+                    <td>{{$value.title}}</td>
+                    <td>{{$value.pub_date|gz_time}}</td>
+                    <td>{{$value.state}}</td>
+                    <td>{{$value.cate_name}}</td>
+                    <td class="cate_btn">
+                        <button type="button" class="layui-btn  layui-btn-normal layui-btn-xs list_edit" data-id="{{$value.Id}}">编辑</button>
+                        <button type="button" class="layui-btn  layui-btn-danger layui-btn-xs list_del" data-id="{{$value.Id}}"> 删除</button>
+                    </td>
+                </tr>
+                {{/each}}
+            </script>
+
+
+            <!-- 分页 -->
+            <div id="cli_page"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="/assets/lib/jquery.js"></script>
+    <script src="/assets/lib/cropper/Cropper.js"></script>
+    <script src="/assets/lib/cropper/jquery-cropper.js"></script>
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <script src="/assets/js/Api_option.js"></script>
+    <script src="/assets/js/user/user_info.js"></script>
+    <script src="/assets/lib/template-web.js"></script>
+    <script src="/assets/lib/tinymce/tinymce.min.js"></script>
+    <script src="/assets/lib/tinymce/tinymce_setup.js"></script>
+    <script src="/assets/js/article/art_list.js"></script>
+    <script src="/assets/js/article/art_create.js"></script>
+</body>
+
+</html>
